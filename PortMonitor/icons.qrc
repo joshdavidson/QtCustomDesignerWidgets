@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>monitoring.png</file>
+        <file>status-circle-gray-256x256.png</file>
+        <file>status-circle-green-256x256.png</file>
+        <file>status-triangle-red-256x256.png</file>
+        <file>status-circle-gray-64x64.png</file>
+        <file>status-circle-green-64x64.png</file>
+        <file>status-triangle-red-64x64.png</file>
+        <file>status-triangle-red-48x48.png</file>
+    </qresource>
+</RCC>
