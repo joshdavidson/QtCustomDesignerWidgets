@@ -20,12 +20,18 @@ INSTALLS    += target
 
 include(pingmonitor.pri)
 
-FILE=$$OUT_PWD/release/pingmonitorplugin.dll
-FILE ~= s,/,\\,g
-DEST=$$[QT_INSTALL_PLUGINS]/designer
-DEST ~= s,/,\\,g
-system(mkdir $$DEST)
+unix {
+  FILE=$$OUT_PWD/libpingmonitorplugin.so
+  DEST=$$[QT_INSTALL_PLUGINS]/designer/
+  QMAKE_POST_LINK += $$quote(cp $${FILE} $${DEST})
+}
+win32 {
+  FILE=$$OUT_PWD/release/pingmonitorplugin.dll
+  FILE ~= s,/,\\,g
+  DEST=$$[QT_INSTALL_PLUGINS]/designer
+  DEST ~= s,/,\\,g
+  system(mkdir $$DEST)
 
-QMAKE_POST_LINK += \
+  QMAKE_POST_LINK += \
         $$quote(cmd /c copy /Y $${FILE} $${DEST}$$escape_expand(\n\t))
-
+}

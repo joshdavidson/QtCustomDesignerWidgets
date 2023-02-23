@@ -1,9 +1,9 @@
-#ifndef PINGMONITORPLUGIN_H
-#define PINGMONITORPLUGIN_H
+#ifndef CSVVIEWERPLUGIN_H
+#define CSVVIEWERPLUGIN_H
 
-#include <QtUiPlugin/QDesignerCustomWidgetInterface>
+#include <QtUiPlugin//QDesignerCustomWidgetInterface>
 
-class PingMonitorPlugin : public QObject, public QDesignerCustomWidgetInterface
+class CsvViewerPlugin : public QObject, public QDesignerCustomWidgetInterface
 {
     Q_OBJECT
     Q_INTERFACES(QDesignerCustomWidgetInterface)
@@ -12,7 +12,7 @@ class PingMonitorPlugin : public QObject, public QDesignerCustomWidgetInterface
 #endif // QT_VERSION >= 0x050000
 
 public:
-    PingMonitorPlugin(QObject *parent = nullptr);
+    CsvViewerPlugin(QObject *parent = 0);
 
     bool isContainer() const;
     bool isInitialized() const;
@@ -30,4 +30,4 @@ private:
     bool m_initialized;
 };
 
-#endif // INCLUDE_PINGMONITORPLUGIN_H
+#endif

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/" >
+        <file>csv-file.png</file>
+
+    </qresource>
+</RCC>

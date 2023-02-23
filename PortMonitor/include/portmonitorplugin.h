@@ -1,7 +1,7 @@
 #ifndef PORTMONITORPLUGIN_H
 #define PORTMONITORPLUGIN_H
 
-#include <QDesignerCustomWidgetInterface>
+#include <QtUiPlugin/QDesignerCustomWidgetInterface>
 
 class PortMonitorPlugin : public QObject, public QDesignerCustomWidgetInterface
 {

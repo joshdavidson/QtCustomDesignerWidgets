@@ -1,12 +1,9 @@
-QT          += network
 CONFIG      += plugin debug_and_release
-TARGET      = $$qtLibraryTarget(portmonitorplugin)
+TARGET      = $$qtLibraryTarget(csvviewerplugin)
 TEMPLATE    = lib
 
-INCLUDEPATH += $$PWD/include
-
-HEADERS     = $$PWD/include/portmonitorplugin.h
-SOURCES     = $$PWD/src/portmonitorplugin.cpp
+HEADERS     = csvviewerplugin.h
+SOURCES     = csvviewerplugin.cpp
 RESOURCES   = icons.qrc
 LIBS        += -L. 
 
@@ -19,14 +16,15 @@ greaterThan(QT_MAJOR_VERSION, 4) {
 target.path = $$[QT_INSTALL_PLUGINS]/designer
 INSTALLS    += target
 
-include(portmonitor.pri)
+include(csvviewer.pri)
+
 unix {
-  FILE=$$OUT_PWD/libportmonitorplugin.so
-  DEST=$$[QT_INSTALL_PLUGINS]/designer
+  FILE=$$OUT_PWD/libcsvviewerplugin.so
+  DEST=$$[QT_INSTALL_PLUGINS]/designer/
   QMAKE_POST_LINK += $$quote(cp $${FILE} $${DEST})
 }
 win32 {
-  FILE=$$OUT_PWD/release/portmonitorplugin.dll
+  FILE=$$OUT_PWD/release/csvviewerplugin.dll
   FILE ~= s,/,\\,g
   DEST=$$[QT_INSTALL_PLUGINS]/designer
   DEST ~= s,/,\\,g
@@ -34,6 +32,5 @@ win32 {
 
   QMAKE_POST_LINK += \
         $$quote(cmd /c copy /Y $${FILE} $${DEST}$$escape_expand(\n\t))
-
 }
 
