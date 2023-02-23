@@ -31,7 +31,7 @@ QWidget *PortMonitorPlugin::createWidget(QWidget *parent)
 
 QString PortMonitorPlugin::name() const
 {
-    return QLatin1String("Port Monitor");
+    return QLatin1String("PortMonitor");
 }
 
 QString PortMonitorPlugin::group() const

@@ -31,7 +31,7 @@ QWidget *PingMonitorPlugin::createWidget(QWidget *parent)
 
 QString PingMonitorPlugin::name() const
 {
-    return QLatin1String("Ping Monitor");
+    return QLatin1String("PingMonitor");
 }
 
 QString PingMonitorPlugin::group() const

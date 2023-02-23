@@ -31,7 +31,7 @@ QWidget *CsvViewerPlugin::createWidget(QWidget *parent)
 
 QString CsvViewerPlugin::name() const
 {
-    return QLatin1String("CSV Viewer");
+    return QLatin1String("CsvViewer");
 }
 
 QString CsvViewerPlugin::group() const
