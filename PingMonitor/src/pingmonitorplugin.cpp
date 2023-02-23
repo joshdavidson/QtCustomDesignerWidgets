@@ -31,12 +31,12 @@ QWidget *PingMonitorPlugin::createWidget(QWidget *parent)
 
 QString PingMonitorPlugin::name() const
 {
-    return QLatin1String("PingMonitor");
+    return QLatin1String("Ping Monitor");
 }
 
 QString PingMonitorPlugin::group() const
 {
-    return QLatin1String("System Monitoring");
+    return QLatin1String("Utilities");
 }
 
 QIcon PingMonitorPlugin::icon() const
@@ -46,12 +46,12 @@ QIcon PingMonitorPlugin::icon() const
 
 QString PingMonitorPlugin::toolTip() const
 {
-    return QLatin1String("");
+    return QLatin1String("Monitors if a host is avaliable by performing network pings");
 }
 
 QString PingMonitorPlugin::whatsThis() const
 {
-    return QLatin1String("");
+    return QLatin1String("Can be used to monitor host availability by performing network pings");
 }
 
 bool PingMonitorPlugin::isContainer() const

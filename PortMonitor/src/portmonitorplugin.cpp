@@ -31,12 +31,12 @@ QWidget *PortMonitorPlugin::createWidget(QWidget *parent)
 
 QString PortMonitorPlugin::name() const
 {
-    return QLatin1String("PortMonitor");
+    return QLatin1String("Port Monitor");
 }
 
 QString PortMonitorPlugin::group() const
 {
-    return QLatin1String("System Monitoring");
+    return QLatin1String("Utilities");
 }
 
 QIcon PortMonitorPlugin::icon() const
@@ -46,12 +46,12 @@ QIcon PortMonitorPlugin::icon() const
 
 QString PortMonitorPlugin::toolTip() const
 {
-    return QLatin1String("Monitors if port on host is open and available");
+    return QLatin1String("Monitors if a port on host is open and available");
 }
 
 QString PortMonitorPlugin::whatsThis() const
 {
-    return QLatin1String("PortMonitor can be used to monitor various applications by verifying a given host's port is open and available.");
+    return QLatin1String("Can be used to monitor various applications by verifying a given host's port is open and available.");
 }
 
 bool PortMonitorPlugin::isContainer() const
