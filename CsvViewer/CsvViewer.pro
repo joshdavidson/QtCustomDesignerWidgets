@@ -23,6 +23,7 @@ unix {
   DEST=$$[QT_INSTALL_PLUGINS]/designer/
   QMAKE_POST_LINK += $$quote(cp $${FILE} $${DEST})
 }
+
 win32 {
   FILE=$$OUT_PWD/release/csvviewerplugin.dll
   FILE ~= s,/,\\,g

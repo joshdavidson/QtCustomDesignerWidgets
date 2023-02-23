@@ -20,11 +20,13 @@ target.path = $$[QT_INSTALL_PLUGINS]/designer
 INSTALLS    += target
 
 include(portmonitor.pri)
+
 unix {
   FILE=$$OUT_PWD/libportmonitorplugin.so
   DEST=$$[QT_INSTALL_PLUGINS]/designer
   QMAKE_POST_LINK += $$quote(cp $${FILE} $${DEST})
 }
+
 win32 {
   FILE=$$OUT_PWD/release/portmonitorplugin.dll
   FILE ~= s,/,\\,g
