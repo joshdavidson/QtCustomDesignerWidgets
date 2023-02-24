@@ -35,3 +35,6 @@ win32 {
         $$quote(cmd /c copy /Y $${FILE} $${DEST}$$escape_expand(\n\t))
 }
 
+DISTFILES += \
+    user_data.csv
+
